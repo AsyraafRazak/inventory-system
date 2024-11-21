@@ -9,7 +9,7 @@ $result = mysqli_query($conn, $query);
     <main>
         <div class="container-fluid px-4">
 
-            <form class="mt-4">
+            <form class="mt-4" method="POST" action="submit_inventory.php" enctype="multipart/form-data">
                 <div class="form-group mt-2">
                     <label for="sn No">SN No</label>
                     <input type="text" class="form-control" id="sn No" name="sn_no" placeholder="Enter SN no of Item">
