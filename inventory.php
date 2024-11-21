@@ -8,7 +8,7 @@
             </ol>
             <div class="row">
                 <div class="col-12 mb-3 text-end">
-                    <a href="" class="btn btn-primary text-white ">Create Item</a>
+                    <a href="/inventory-system/create-inventory.php" class="btn btn-primary text-white ">Create Item</a>
                 </div>
                 <div class="col-12">
                     <div class="card mb-4">
