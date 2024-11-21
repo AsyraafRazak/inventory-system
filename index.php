@@ -29,7 +29,7 @@
                                                 <input class="form-control" id="inputPassword" type="password" placeholder="Password" />
                                                 <label for="inputPassword">Password</label>
                                             </div>
-                                            <a class="btn btn-primary form-control" href="index.html">Login</a>
+                                            <a class="btn btn-primary form-control" href="">Login</a>
                                         </form>
                                     </div>
                                 </div>
