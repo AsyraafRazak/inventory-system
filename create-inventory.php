@@ -12,11 +12,11 @@ $result = mysqli_query($conn, $query);
             <form class="mt-4" method="POST" action="submit_inventory.php" enctype="multipart/form-data">
                 <div class="form-group mt-2">
                     <label for="sn No">SN No</label>
-                    <input type="text" class="form-control" id="sn No" name="sn_no" placeholder="Enter SN no of Item">
+                    <input type="text" class="form-control" id="snNo" name="sn_no" placeholder="Enter SN no of Item" required>
                 </div>
                 <div class="form-group mt-2">
                     <label for="itemName">Item Name</label>
-                    <input type="text" class="form-control" id="itemName" name="item_name" placeholder="Enter item name">
+                    <input type="text" class="form-control" id="itemName" name="item_name" placeholder="Enter item name" required>
                 </div>
                 <div class="form-group mt-2">
                     <label for="itemDesc">Item Desc</label>
@@ -28,11 +28,11 @@ $result = mysqli_query($conn, $query);
                 </div>
                 <div class="form-group mt-2">
                     <label for="qty">Item Qty</label>
-                    <input type="number" class="form-control" id="qty" name="qty" placeholder="Enter item qty">
+                    <input type="number" class="form-control" id="qty" name="qty" placeholder="Enter item qty" required>
                 </div>
                 <div class="form-group mt-2">
                     <label for="category">Item Category</label>
-                    <select name="category_id" class="form-control">
+                    <select name="category_id" class="form-control" required>
                         <option value="">Select Category</option>
                         <?php
                         while ($row = mysqli_fetch_assoc($result)) {
