@@ -1,5 +1,27 @@
 <?php include('layout/header.php'); ?>
-<?php include('db_connection.php'); ?>
+<?php include('db_connection.php');
+
+$query = "
+SELECT 
+    inventory.id,
+    inventory.sn_no,
+    inventory.item_name,
+    inventory.item_desc,
+    inventory.img,
+    inventory.qty,
+    inventory.created_at,
+    inventory.category_id,
+    category.name As category_name
+FROM
+    inventory
+JOIN
+    category ON inventory.category_id = category.id
+";
+$result = mysqli_query($conn, $query);
+
+//print_r($result);
+?>
+
 <div id="layoutSidenav_content">
     <main>
         <div class="container-fluid px-4">
@@ -25,6 +47,7 @@
                                         <th>Item Name</th>
                                         <th>Item Desc</th>
                                         <th>Img</th>
+                                        <th>Category</th>
                                         <th>Qty</th>
                                         <th>Created At</th>
                                         <th>Action</th>
@@ -36,24 +59,32 @@
                                         <th>Item Name</th>
                                         <th>Item Desc</th>
                                         <th>Img</th>
+                                        <th>Category</th>
                                         <th>Qty</th>
                                         <th>Created At</th>
                                         <th>Action</th>
                                     </tr>
                                 </tfoot>
                                 <tbody>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td>
-                                            <a href="" class="btn btn-warning">Edit</a>
-                                            <a href="" class="btn btn-danger">Edit</a>
-                                        </td>
-                                    </tr>
+                                    <?php foreach ($result as $r): ?>
+                                        <tr>
+                                            <td><?php echo $r['sn_no']; ?></td>
+                                            <td><?php echo $r['item_name']; ?></td>
+                                            <td><?php echo $r['item_desc']; ?></td>
+                                            <td>
+                                                <?php if (!empty($r['img'])) { ?>
+                                                    <img src="<?php echo $r['img']; ?>" width="100" alt="img_file">
+                                                <?php } ?>
+                                            </td>
+                                            <td><?php echo $r['category_name']; ?></td>
+                                            <td><?php echo $r['qty']; ?></td>
+                                            <td><?php echo $r['created_at']; ?></td>
+                                            <td>
+                                                <a href="" class="btn btn-warning">Edit</a>
+                                                <a href="" class="btn btn-danger">Edit</a>
+                                            </td>
+                                        </tr>
+                                    <?php endforeach; ?>
                                 </tbody>
                             </table>
                         </div>
