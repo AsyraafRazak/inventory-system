@@ -80,7 +80,7 @@ $result = mysqli_query($conn, $query);
                                             <td><?php echo $r['qty']; ?></td>
                                             <td><?php echo $r['created_at']; ?></td>
                                             <td>
-                                                <a href="" class="btn btn-warning">Edit</a>
+                                                <a href="/inventory-system/edit-inventory.php?id=<?php echo $r['id'];?>" class="btn btn-warning">Edit</a>
                                                 <a href="" class="btn btn-danger">Edit</a>
                                             </td>
                                         </tr>
