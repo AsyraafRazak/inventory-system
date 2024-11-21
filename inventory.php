@@ -1,4 +1,5 @@
 <?php include('layout/header.php'); ?>
+<?php include('db_connection.php'); ?>
 <div id="layoutSidenav_content">
     <main>
         <div class="container-fluid px-4">
