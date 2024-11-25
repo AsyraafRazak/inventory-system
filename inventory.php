@@ -28,6 +28,9 @@ $result = mysqli_query($conn, $query);
         if (isset($_GET['update'])  && $_GET['update'] == 'success') {
             echo "<div class='alert alert-success'>Inventory updated successfully!</div>";
         }
+        if (isset($_GET['update'])  && $_GET['update'] == 'deleted') {
+            echo "<div class='alert alert-danger'>Inventory deleted successfully!</div>";
+        }
         ?>
         <div class="container-fluid px-4">
             <h1 class="mt-4">Inventory</h1>
@@ -86,7 +89,7 @@ $result = mysqli_query($conn, $query);
                                             <td><?php echo $r['created_at']; ?></td>
                                             <td>
                                                 <a href="/inventory-system/edit-inventory.php?id=<?php echo $r['id'];?>" class="btn btn-warning">Edit</a>
-                                                <a href="" class="btn btn-danger">Delete</a>
+                                                <a href="/inventory-system/delete-inventory.php?id=<?php echo $r['id'];?>" class="btn btn-danger">Delete</a>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>

@@ -69,7 +69,7 @@ $inventory_data = mysqli_fetch_assoc($result_2);
                     </select>
                 </div>
 
-                <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                <button type="submit" class="btn btn-primary mt-3">Edit</button>
             </form>
 
         </div>
