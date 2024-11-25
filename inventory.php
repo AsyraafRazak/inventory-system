@@ -24,6 +24,11 @@ $result = mysqli_query($conn, $query);
 
 <div id="layoutSidenav_content">
     <main>
+        <?php
+        if (isset($_GET['update'])  && $_GET['update'] == 'success') {
+            echo "<div class='alert alert-success'>Inventory updated successfully!</div>";
+        }
+        ?>
         <div class="container-fluid px-4">
             <h1 class="mt-4">Inventory</h1>
             <ol class="breadcrumb mb-4">

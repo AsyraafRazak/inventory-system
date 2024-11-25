@@ -29,7 +29,9 @@ $inventory_data = mysqli_fetch_assoc($result_2);
     <main>
         <div class="container-fluid px-4">
 
-            <form class="mt-4" method="POST" action="submit_inventory.php" enctype="multipart/form-data">
+            <form class="mt-4" method="POST" action="submit_edited_inventory.php" enctype="multipart/form-data">
+                <input type="hidden" name="id" value = "<?php echo htmlspecialchars($inventory_data['id']); ?>">
+
                 <div class="form-group mt-2">
                     <label for="sn No">SN No</label>
                     <input type="text" class="form-control" id="snNo" name="sn_no" placeholder="Enter SN no of Item" 
@@ -47,7 +49,7 @@ $inventory_data = mysqli_fetch_assoc($result_2);
                 <div class="form-group mt-2">
                     <label for="img">Item Img</label>
                     <input type="file" id="img" name="img" accept="image/*">
-                    <p>Current Image: <img src="<?php echo htmlspecialchars($inventory_data['img']); ?>" alt="img" width="20%"></p>
+                    <p>Current Image: <img src="<?php echo htmlspecialchars($inventory_data['img']); ?>" alt="img" width="2 0%"></p>
                 </div>
                 <div class="form-group mt-2">
                     <label for="qty">Item Qty</label>
