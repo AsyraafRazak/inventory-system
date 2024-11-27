@@ -24,10 +24,10 @@ $result = mysqli_query($conn, $query);
     <main>
         <div class="container-fluid px-4">
 
-            <form class="mt-4" method="POST" action="">
+            <form class="mt-4" method="POST" action="/inventory-system/stock_in_save.php">
                 <div class="form-group mt-2">
-                    <label for="item_name">Item Name : </label>
-                    <select name="item_name" id="item_name" class="form-control">
+                    <label for="id">Item Name : </label>
+                    <select name="id" id="id" class="form-control">
                         <?php foreach ($result as $r): ?>
                         <option value="<?php echo $r['id']; ?>"><?php echo $r['item_name'];?></option>
                         <?php endforeach;?>
