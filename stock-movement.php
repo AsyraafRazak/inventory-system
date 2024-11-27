@@ -5,7 +5,7 @@
             <h1 class="mt-4">Stock Movement</h1>
             <div class="row">
                 <div class="col-12 mb-3 text-end">
-                    <a href="" class="btn btn-success text-white ">Stock In</a>
+                    <a href="/inventory-system/stock-in.php" class="btn btn-success text-white ">Stock In</a>
                     <a href="" class="btn btn-danger text-white ">Stock out</a>
                 </div>
                 <div class="col-12">
