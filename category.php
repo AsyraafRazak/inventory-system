@@ -41,7 +41,7 @@ $result = mysqli_query($conn, $sql);
                                         <tr>
                                             <td><?php echo $r['id']; ?></td>
                                             <td><?php echo $r['name']; ?></td>
-                                            <td><a href="" class="btn btn-danger">Delete</a></td>
+                                            <td><a href="/inventory-system/delete-category.php?id=<?php echo $r['id']; ?>" class="btn btn-danger">Delete</a></td>
                                         </tr>
                                     <?php endforeach; ?>
                                 </tbody>
