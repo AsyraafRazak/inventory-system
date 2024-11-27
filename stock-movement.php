@@ -1,4 +1,11 @@
 <?php include('layout/header.php'); ?>
+<?php include('db_connection.php'); 
+
+$sql = "SELECT * FROM stock_movement;";
+$result = mysqli_query($conn, $sql);
+
+?>
+
 <div id="layoutSidenav_content">
     <main>
         <div class="container-fluid px-4">
@@ -12,7 +19,7 @@
                     <div class="card mb-4">
                         <div class="card-header">
                             <i class="fas fa-table me-1"></i>
-                            All Inventory
+                            Stock Movement Log
                         </div>
                         <div class="card-body">
                             <table id="datatablesSimple">
@@ -37,14 +44,16 @@
                                     </tr>
                                 </tfoot>
                                 <tbody>
+                                    <?php foreach ($result as $r): ?>
                                     <tr>
-                                        <td>Tiger Nixon</td>
-                                        <td>System Architect</td>
-                                        <td>Edinburgh</td>
-                                        <td>61</td>
-                                        <td>2011/04/25</td>
-                                        <td>$320,800</td>
+                                        <td><?php echo $r['type']; ?></td>
+                                        <td><?php echo $r['sn_no']; ?></td>
+                                        <td><?php echo $r['item_name']; ?></td>
+                                        <td><?php echo $r['item_desc']; ?></td>
+                                        <td><?php echo $r['qty']; ?></td>
+                                        <td><?php echo $r['created_at']; ?></td>
                                     </tr>
+                                    <?php endforeach; ?>
                                 </tbody>
                             </table>
                         </div>
