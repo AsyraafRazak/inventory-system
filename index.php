@@ -18,18 +18,18 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-5">
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Simple Inventory Sistem</h3></div>
+                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Simple Inventory System</h3></div>
                                     <div class="card-body">
-                                        <form>
+                                        <form method="post" action="auth.php">
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" id="inputEmail" type="email" placeholder="name@example.com" />
+                                                <input class="form-control" id="inputEmail" type="email" name="email" placeholder="name@example.com" />
                                                 <label for="inputEmail">Email address</label>
                                             </div>
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" id="inputPassword" type="password" placeholder="Password" />
+                                                <input class="form-control" id="inputPassword" type="password" name="password" placeholder="Password" />
                                                 <label for="inputPassword">Password</label>
                                             </div>
-                                            <a class="btn btn-primary form-control" href="">Login</a>
+                                            <button type="submit" class="btn btn-primary form-control mt-3">Login</a>
                                         </form>
                                     </div>
                                 </div>
