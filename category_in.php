@@ -1,3 +1,4 @@
+<?php include 'session_check.php';?>
 <?php include('layout/header.php'); ?>
 <div id="layoutSidenav_content">
     <main>

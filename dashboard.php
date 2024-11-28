@@ -1,3 +1,4 @@
+<?php include 'session_check.php';?>
 <?php include('layout/header.php');
 include ('db_connection.php');
 
@@ -58,4 +59,4 @@ $total_stock_out = $row_total_stock_out['total_stock_out'];
             </div>
         </main>
     </div>
-    <?php include('layout/footer.php');
+    <?php include('layout/footer.php');?>
