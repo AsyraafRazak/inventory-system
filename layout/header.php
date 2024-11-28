@@ -54,7 +54,7 @@
                             Stock Movement
                         </a>
                         <a class="nav-link" href="/inventory-system/category.php">
-                            <div class="sb-nav-link-icon"><i class="fas fa-directions"></i></div>
+                            <div class="sb-nav-link-icon"><i class="fas fa-grip-horizontal"></i></div>
                             Categories
                         </a>
                     </div>
