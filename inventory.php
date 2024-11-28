@@ -81,15 +81,15 @@ $result = mysqli_query($conn, $query);
                                             <td><?php echo $r['item_desc']; ?></td>
                                             <td>
                                                 <?php if (!empty($r['img'])) { ?>
-                                                    <img src="<?php echo $r['img']; ?>" width="100" alt="img_file">
-                                                <?php } ?>
+                                                    <a href="/inventory-system/<?php echo $r['img']; ?>" target="_blank"><u>Image</u>
+                                                    <?php } ?>
                                             </td>
                                             <td><?php echo $r['category_name']; ?></td>
                                             <td><?php echo $r['qty']; ?></td>
                                             <td><?php echo $r['created_at']; ?></td>
                                             <td>
-                                                <a href="/inventory-system/edit-inventory.php?id=<?php echo $r['id'];?>" class="btn btn-warning">Edit</a>
-                                                <a href="/inventory-system/delete-inventory.php?id=<?php echo $r['id'];?>" class="btn btn-danger">Delete</a>
+                                                <a href="/inventory-system/edit-inventory.php?id=<?php echo $r['id']; ?>" class="btn btn-warning">Edit</a>
+                                                <a href="/inventory-system/delete-inventory.php?id=<?php echo $r['id']; ?>" class="btn btn-danger">Delete</a>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>
