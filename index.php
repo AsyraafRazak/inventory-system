@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+// Check if the user is logged in by verifying session variables
+if (isset($_SESSION['user-id'])) {
+    // If logged in, redirect to dashboard
+    header("Location: /inventory-system/dashboard.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
